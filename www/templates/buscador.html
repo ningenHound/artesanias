@@ -1,0 +1,36 @@
+<ion-view>
+
+
+		
+
+<ion-header-bar class="bar-calm">
+        <button class="button" ng-click=verInfo()>info</button>
+        <h1 class="title">{{titulo}}</h1>
+
+      </ion-header-bar>
+	<ion-content>
+		<ion-list-insert>
+    				<label class="item item-input">
+    				<i class="icon ion-search placeholder-icon"></i>
+    				<input type="text" placeholder="Buscar Producto..." ng-model="buscador">
+  				</label>
+</ion-list-insert>
+		<!--<button ng-click=verInfo()>Info</button>-->
+		  
+  			<div class="card">
+  <div class="item item-text-wrap">
+			 <ion-list>
+    			<ion-item ng-repeat="x in productos | filter: buscador">
+    					<div class="item item-divider">
+                <p><strong>Producto:</strong> {{x.producto}}</p>
+						  </div>
+  						<p><strong>Artesano:</strong> {{x.nombre}}</p>
+  						<p><strong>Localidad:</strong> {{x.localidad}}</p>
+    			</ion-item>
+  			</ion-list>
+</div>
+</div>
+		 
+
+	</ion-content>	
+</ion-view>
